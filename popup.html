@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      font-size: 13px;
+      margin: 0;
+      padding: 14px;
+      width: 320px;
+      background: #fff;
+      color: #222;
+    }
+    h2 {
+      margin: 0 0 4px;
+      font-size: 15px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .url-label {
+      font-size: 11px;
+      color: #888;
+      margin-bottom: 12px;
+      word-break: break-all;
+    }
+    .warning {
+      display: none;
+      margin-bottom: 12px;
+      padding: 8px 10px;
+      border-radius: 6px;
+      border: 1px solid #f5c48b;
+      background: #fff4e5;
+      color: #8a4b00;
+      font-size: 11px;
+      line-height: 1.4;
+    }
+    .warning.visible {
+      display: block;
+    }
+    .edit-item {
+      background: #f5f5f5;
+      border-radius: 6px;
+      padding: 8px 10px;
+      margin-bottom: 8px;
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 8px;
+    }
+    .edit-selector {
+      font-family: monospace;
+      font-size: 11px;
+      color: #555;
+      word-break: break-all;
+      flex: 1;
+    }
+    .edit-type {
+      font-size: 10px;
+      background: #dde;
+      color: #446;
+      border-radius: 3px;
+      padding: 2px 5px;
+      white-space: nowrap;
+    }
+    .delete-btn {
+      background: none;
+      border: none;
+      color: #c00;
+      cursor: pointer;
+      font-size: 14px;
+      padding: 0 2px;
+      line-height: 1;
+    }
+    .delete-btn:hover { color: #900; }
+    .empty {
+      color: #aaa;
+      font-size: 12px;
+      text-align: center;
+      padding: 20px 0;
+    }
+    .clear-btn {
+      width: 100%;
+      margin-top: 8px;
+      background: #fee;
+      color: #900;
+      border: 1px solid #fcc;
+      border-radius: 5px;
+      padding: 6px;
+      cursor: pointer;
+      font-size: 12px;
+    }
+    .clear-btn:hover { background: #fdd; }
+    .tip {
+      font-size: 11px;
+      color: #999;
+      margin-top: 12px;
+      line-height: 1.5;
+      border-top: 1px solid #eee;
+      padding-top: 10px;
+    }
+  </style>
+</head>
+<body>
+  <h2>💾 Custom Web Editor</h2>
+  <div class="url-label" id="currentUrl">Loading…</div>
+  <div class="warning" id="compatibilityWarning"></div>
+  <div id="editList"></div>
+  <div class="tip">Open DevTools → <strong>HTML Saver</strong> tab to save edits on this page.</div>
+  <script src="popup.js"></script>
+</body>
+</html>
