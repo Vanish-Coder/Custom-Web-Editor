@@ -1,6 +1,6 @@
 # Custom Web Editor
 
-A Chrome extension that lets you edit any website's HTML through DevTools and permanently save those changes — so they're automatically re-applied every time you visit that page.
+A Chrome extension that lets you edit any website's HTML through DevTools and permanently save those changes.
 
 ---
 
